@@ -23,11 +23,32 @@ namespace WebApi.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
+        [HttpGet("GetProductById")]
+        public IActionResult Get(int id)
+        {
+            var result = _productService.Get(id);
+            return Ok(result);
+        }
+
+        [HttpPost("Add")]
         public IActionResult Add(Product product)
         {
-            _productService.Add(product);
-            return Ok(Messages.Added);
+            var result = _productService.Add(product);
+            return Ok(result);
+        }
+
+        [HttpPost("Update")]
+        public IActionResult Update(Product product)
+        {
+            var result = _productService.Update(product);
+            return Ok(result);
+        }
+
+        [HttpPost("Delete")]
+        public IActionResult Delete(Product product)
+        {
+            var result = _productService.Delete(product);
+            return Ok(result);
         }
     }
 }
