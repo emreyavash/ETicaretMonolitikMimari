@@ -93,3 +93,4 @@ C:\Users\emrey\source\repos\ETicaretProject\WebApi\bin\Debug\net6.0\Microsoft.Ex
 C:\Users\emrey\source\repos\ETicaretProject\WebApi\bin\Debug\net6.0\Newtonsoft.Json.dll
 C:\Users\emrey\source\repos\ETicaretProject\WebApi\obj\Debug\net6.0\WebApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\emrey\source\repos\ETicaretProject\WebApi\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\emrey\source\repos\ETicaretProject\WebApi\bin\Debug\net6.0\WebApi.staticwebassets.runtime.json
