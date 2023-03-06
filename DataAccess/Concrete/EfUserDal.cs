@@ -1,9 +1,11 @@
 ﻿using Core.DataAccess.EntityFramework;
 using Core.Entities.Concrete;
 using DataAccess.Abstract;
+using Entity.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,6 +26,24 @@ namespace DataAccess.Concrete
             }
         }
 
-        
+        public UserDetailDTO GetUserByEmail(string email)
+        {
+            using (var context = new ETicaretContext())
+            {
+                var result = from user in context.Users
+                             join userClaims in context.UserOperationClaims
+                             on user.Id equals userClaims.UserId
+                             select new UserDetailDTO
+                             {
+                                 Id = user.Id,
+                                 FirstName = user.FirstName,
+                                 LastName = user.LastName,
+                                 Status = user.Status,
+                                 Email = user.Email,
+                                 ClaimId = userClaims.ClaimId,
+                             };
+                return result.Where(x=>x.Email==email).FirstOrDefault();
+            }
+        }
     }
 }

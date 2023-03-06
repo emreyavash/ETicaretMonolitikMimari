@@ -30,11 +30,27 @@ namespace WebApi.Controllers
             return Ok(result);
         }
 
+        [HttpGet("GetProductDetail")]
+        public IActionResult GetProductDetail(int id)
+        {
+            var result = _productService.GetProductDetail(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest();
+        }
         [HttpPost("Add")]
         public IActionResult Add(Product product)
         {
+            product.CreatedDate = DateTime.UtcNow;
             var result = _productService.Add(product);
-            return Ok(result);
+            if (result.Success)
+            {
+                return Ok(result);
+
+            }
+            return BadRequest();
         }
 
         [HttpPost("Update")]
@@ -48,6 +64,13 @@ namespace WebApi.Controllers
         public IActionResult Delete(Product product)
         {
             var result = _productService.Delete(product);
+            return Ok(result);
+        }
+
+        [HttpGet("GetProductsByUserId")]
+        public IActionResult GetProductsByUserId(int userId)
+        {
+            var result = _productService.GetAllById(userId);
             return Ok(result);
         }
     }

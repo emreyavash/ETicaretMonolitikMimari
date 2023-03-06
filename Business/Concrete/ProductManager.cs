@@ -7,6 +7,7 @@ using Core.Aspects.Autofac.Validation;
 using Core.Utilities.Results;
 using DataAccess.Abstract;
 using Entity.Concrete;
+using Entity.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,8 +24,8 @@ namespace Business.Concrete
         {
             _productDal = productDal;
         }
-        [CacheAspect]
-        [SecuredOperation("admin")]
+        //[CacheAspect]
+        [SecuredOperation("admin,seller")]
         [ValidationAspect(typeof(ProductValidator))]
         public IResult Add(Product product)
         {
@@ -44,10 +45,22 @@ namespace Business.Concrete
             return new SuccessDataResult<Product>(result);
         }
 
-        public IDataResult<List<Product>> GetAll()
+        public IDataResult<List<ProductDetailDto>> GetAll()
         {
-            var result = _productDal.GetAll();
-            return new SuccessDataResult<List<Product>>(result,Messages.Listed);
+            var result = _productDal.GetProductDetail();
+            return new SuccessDataResult<List<ProductDetailDto>>(result,Messages.Listed);
+        }
+
+        public IDataResult<List<ProductDetailDto>> GetAllById(int userId)
+        {
+            var result = _productDal.GetProductsByUserId(userId);
+            return new SuccessDataResult<List < ProductDetailDto >> (result, Messages.Listed);
+        }
+
+        public IDataResult<List<ProductDetailDto>> GetProductDetail(int id)
+        {
+            var result = _productDal.GetProductDetail(p=>p.Id == id);
+            return new SuccessDataResult<List<ProductDetailDto>>(result);
         }
 
         public IResult Update(Product product)

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "W6z9Ihv6hadp7XDOro2uVKSmUb7kC/W2uOePYtcNHDA=",
+  "Hash": "8bwYWU1xRF8V76NAo3AxTDm210+9A1pMrmd5qtv/4Z0=",
   "Source": "WebApi",
   "BasePath": "_content/WebApi",
   "Mode": "Default",
@@ -15,5 +15,57 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\emrey\\source\\repos\\ETicaretProject\\WebApi\\wwwroot\\Uploads\\Default\\iphone.jpeg",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emrey\\source\\repos\\ETicaretProject\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "Uploads/Default/iphone.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Default\\iphone.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\emrey\\source\\repos\\ETicaretProject\\WebApi\\wwwroot\\Uploads\\Images\\96bfcb78-7115-461a-a95c-2f411117e247.jpeg",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emrey\\source\\repos\\ETicaretProject\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "Uploads/Images/96bfcb78-7115-461a-a95c-2f411117e247.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Images\\96bfcb78-7115-461a-a95c-2f411117e247.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\emrey\\source\\repos\\ETicaretProject\\WebApi\\wwwroot\\Uploads\\Images\\a383d770-6396-424a-bb2e-e332c8bf686b.jpeg",
+      "SourceId": "WebApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\emrey\\source\\repos\\ETicaretProject\\WebApi\\wwwroot\\",
+      "BasePath": "_content/WebApi",
+      "RelativePath": "Uploads/Images/a383d770-6396-424a-bb2e-e332c8bf686b.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Uploads\\Images\\a383d770-6396-424a-bb2e-e332c8bf686b.jpeg"
+    }
+  ]
 }

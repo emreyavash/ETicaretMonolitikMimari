@@ -28,11 +28,23 @@ namespace WebApi.Controllers
             return Ok(result);
         }
 
-        [HttpPost]
+        [HttpPost("Add")]
         public IActionResult Add(User user)
         {
             var result = _userService.Add(user);
             return Ok(result.Message);
+        }
+        [HttpGet("UserEmail")]
+        public IActionResult GetUserEmail(string email) {
+            var result = _userService.GetByMail(email);
+            return Ok(result);
+        }
+
+        [HttpGet("GetUserClaimByEmail")]
+        public IActionResult GetUserClaimByEmail(string email)
+        {
+            var result = _userService.GetUserByMail(email);
+            return Ok(result);
         }
 
     }
